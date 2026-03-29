@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1B5E20">
+  <title>웹 명함 QR — 꿀잼영어</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      font-family: system-ui, "Malgun Gothic", sans-serif;
+      background: #f0f4ec;
+      color: #1b3d16;
+    }
+    h1 { font-size: 1.25rem; margin: 0 0 8px; }
+    .sub { font-size: 0.9rem; opacity: 0.85; margin: 0 0 20px; text-align: center; }
+    #qr-box {
+      padding: 20px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(27, 94, 32, 0.12);
+    }
+    #url-text {
+      margin-top: 20px;
+      font-size: 0.8rem;
+      word-break: break-all;
+      max-width: 320px;
+      text-align: center;
+      color: #33691e;
+    }
+  </style>
+</head>
+<body>
+  <h1>꿀잼영어 · 웹 명함</h1>
+  <p class="sub">스캔하면 디지털 명함으로 바로 이동합니다</p>
+  <div id="qr-box"></div>
+  <p id="url-text"></p>
+  <script src="config.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" crossorigin referrerpolicy="no-referrer"></script>
+  <script>
+    (function () {
+      var u =
+        typeof CARD_PUBLIC_URL === 'string' && CARD_PUBLIC_URL.trim()
+          ? CARD_PUBLIC_URL.trim()
+          : 'https://juneltea-png.github.io/card/';
+      document.getElementById('url-text').textContent = u;
+      var el = document.getElementById('qr-box');
+      el.innerHTML = '';
+      if (typeof QRCode !== 'undefined') {
+        new QRCode(el, {
+          text: u,
+          width: 280,
+          height: 280,
+          colorDark: '#1B5E20',
+          colorLight: '#ffffff',
+          correctLevel: QRCode.CorrectLevel.H
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
