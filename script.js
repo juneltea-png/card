@@ -39,21 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const homeUrl =
     trimUrl(typeof HOMEPAGE_QR_URL !== 'undefined' ? HOMEPAGE_QR_URL : '') ||
     'https://honeyjam-english.com/';
-  const cardUrl =
-    trimUrl(typeof WEB_CARD_SHARE_URL !== 'undefined' ? WEB_CARD_SHARE_URL : '') ||
-    (() => {
-      const u = new URL(window.location.href);
-      u.hash = '';
-      let s = u.toString();
-      if (s.endsWith('/index.html')) s = s.slice(0, -'index.html'.length);
-      return s.replace(/\/$/, '') || u.href;
-    })();
 
-  makeQr('qr-code-home', homeUrl, 118);
-  makeQr('qr-code-card', cardUrl, 108);
-
+  makeQr('qr-code', homeUrl, 118);
   bindCopy('copy-home-link', () => homeUrl);
-  bindCopy('copy-webcard-link', () => cardUrl);
 
   const kakaoEl = document.getElementById('contact-kakao');
   if (kakaoEl && typeof KAKAO_URL === 'string' && KAKAO_URL.trim()) {

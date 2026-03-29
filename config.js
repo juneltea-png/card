@@ -6,7 +6,7 @@ const NAVER_MAP_CLIENT_ID = 'YOUR_CLIENT_ID';
 // 명함 안 첫 번째 QR + 「홈페이지」 링크 복사
 const HOMEPAGE_QR_URL = 'https://honeyjam-english.com/';
 
-// 두 번째 QR: 스캔 시 디지털 웹명함(GitHub Pages)으로 이동 + 「웹명함」 링크 복사
+// qr-print.html 전용: 웹명함(URL만 큰 QR). 명함 페이지에는 QR 없음.
 const WEB_CARD_SHARE_URL = 'https://juneltea-png.github.io/card/';
 
 // 카카오톡 채널 (비우면 행을 숨깁니다)
