@@ -47,8 +47,8 @@
   <script>
     (function () {
       var u =
-        typeof CARD_PUBLIC_URL === 'string' && CARD_PUBLIC_URL.trim()
-          ? CARD_PUBLIC_URL.trim()
+        typeof WEB_CARD_SHARE_URL === 'string' && WEB_CARD_SHARE_URL.trim()
+          ? WEB_CARD_SHARE_URL.trim()
           : 'https://juneltea-png.github.io/card/';
       document.getElementById('url-text').textContent = u;
       var el = document.getElementById('qr-box');

@@ -42,15 +42,22 @@
         </div>
 
         <div class="map-qr-row">
-          <!-- 네이버 지도 -->
           <div class="map-wrapper">
             <div id="naver-map"></div>
           </div>
-          <div class="qr-section">
-            <p class="qr-label">웹 명함 (QR)</p>
-            <div id="qr-code" class="qr-code" aria-label="디지털 명함 페이지로 연결되는 QR 코드"></div>
-            <p class="qr-hint">스캔 시 이 웹명함으로 이동</p>
-            <button type="button" class="copy-link-btn" id="copy-card-link">링크 복사</button>
+          <div class="qr-column">
+            <div class="qr-section qr-section--home">
+              <p class="qr-label">꿀잼영어 홈페이지</p>
+              <div id="qr-code-home" class="qr-code" aria-label="꿀잼영어 홈페이지로 연결되는 QR 코드"></div>
+              <p class="qr-hint">스캔 시 홈페이지로 이동</p>
+              <button type="button" class="copy-link-btn" id="copy-home-link">홈페이지 링크 복사</button>
+            </div>
+            <div class="qr-section qr-section--card">
+              <p class="qr-label">웹 명함</p>
+              <div id="qr-code-card" class="qr-code" aria-label="이 디지털 명함 주소로 연결되는 QR 코드"></div>
+              <p class="qr-hint">스캔 시 이 웹명함으로 이동</p>
+              <button type="button" class="copy-link-btn" id="copy-webcard-link">웹명함 링크 복사</button>
+            </div>
           </div>
         </div>
       </div>
