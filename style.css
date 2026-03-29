@@ -9,6 +9,7 @@
 :root {
   --font-display: 'EF_DIARY', ui-serif, serif;
   --font-body: system-ui, 'Apple SD Gothic Neo', 'Malgun Gothic', 'Segoe UI', sans-serif;
+  --content-fs-bump: 2pt;
 }
 
 * {
@@ -134,7 +135,7 @@ body {
 
 .card-top .name {
   font-family: var(--font-display);
-  font-size: 1.55rem;
+  font-size: calc(1.55rem + var(--content-fs-bump));
   font-weight: 700;
   color: #fff;
   text-align: left;
@@ -145,7 +146,7 @@ body {
 
 .card-top .job {
   font-family: var(--font-display);
-  font-size: 0.98rem;
+  font-size: calc(0.98rem + var(--content-fs-bump));
   color: #FFFDE7;
   text-align: left;
   margin-bottom: 6px;
@@ -155,7 +156,7 @@ body {
 
 .card-top .tagline {
   font-family: var(--font-display);
-  font-size: 0.82rem;
+  font-size: calc(0.82rem + var(--content-fs-bump));
   color: #F9FFF5;
   text-align: left;
   line-height: 1.45;
@@ -184,7 +185,7 @@ body {
   border-radius: 10px;
   text-decoration: none;
   color: #4E342E;
-  font-size: 0.9rem;
+  font-size: calc(0.9rem + var(--content-fs-bump));
   line-height: 1.35;
   letter-spacing: -0.01em;
   transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
@@ -251,7 +252,7 @@ body {
   }
 
   .map-qr-row .qr-label {
-    font-size: 0.78rem;
+    font-size: calc(0.78rem + var(--content-fs-bump));
     margin-bottom: 4px;
     line-height: 1.25;
   }
@@ -268,7 +269,7 @@ body {
   .map-qr-row .copy-link-btn {
     margin-top: 6px;
     padding: 6px 10px;
-    font-size: 0.78rem;
+    font-size: calc(0.78rem + var(--content-fs-bump));
     width: 100%;
     max-width: 118px;
   }
@@ -285,7 +286,7 @@ body {
 
 .qr-label {
   font-family: var(--font-display);
-  font-size: 0.92rem;
+  font-size: calc(0.92rem + var(--content-fs-bump));
   color: #33691E;
   margin-bottom: 6px;
   font-weight: 700;
@@ -308,7 +309,7 @@ body {
 
 .qr-hint {
   font-family: var(--font-body);
-  font-size: 0.82rem;
+  font-size: calc(0.82rem + var(--content-fs-bump));
   color: #5D4037;
   margin-top: 6px;
   line-height: 1.35;
@@ -320,7 +321,7 @@ body {
   font-weight: 600;
   margin-top: 8px;
   padding: 7px 16px;
-  font-size: 0.85rem;
+  font-size: calc(0.85rem + var(--content-fs-bump));
   color: #fff;
   background: linear-gradient(180deg, #2E7D32 0%, #1B5E20 100%);
   border: none;
@@ -347,7 +348,7 @@ body {
 }
 
 .icon {
-  font-size: 1.1rem;
+  font-size: calc(1.1rem + var(--content-fs-bump));
   flex-shrink: 0;
 }
 
@@ -402,7 +403,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem;
+  font-size: calc(1.25rem + var(--content-fs-bump));
   background: rgba(255, 255, 255, 0.85);
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(27, 94, 32, 0.15);
@@ -419,14 +420,14 @@ body {
 }
 
 .map-fallback__title {
-  font-size: 0.95rem;
+  font-size: calc(0.95rem + var(--content-fs-bump));
   font-weight: 700;
   letter-spacing: -0.02em;
   color: #1B5E20;
 }
 
 .map-fallback__sub {
-  font-size: 0.78rem;
+  font-size: calc(0.78rem + var(--content-fs-bump));
   font-weight: 500;
   color: #33691E;
   opacity: 0.95;
@@ -435,7 +436,7 @@ body {
 
 .map-fallback__chev {
   flex-shrink: 0;
-  font-size: 1.35rem;
+  font-size: calc(1.35rem + var(--content-fs-bump));
   font-weight: 300;
   color: #2E7D32;
   opacity: 0.85;
@@ -457,7 +458,7 @@ body {
 .map-info-window {
   padding: 8px 12px;
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: calc(13px + var(--content-fs-bump));
   line-height: 1.45;
 }
 
@@ -479,15 +480,15 @@ body {
   }
 
   .card-top .name {
-    font-size: 1.35rem;
+    font-size: calc(1.35rem + var(--content-fs-bump));
   }
 
   .card-top .job {
-    font-size: 0.9rem;
+    font-size: calc(0.9rem + var(--content-fs-bump));
   }
 
   .card-top .tagline {
-    font-size: 0.76rem;
+    font-size: calc(0.76rem + var(--content-fs-bump));
     padding: 5px 8px;
   }
 

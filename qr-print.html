@@ -19,8 +19,9 @@
       background: #f0f4ec;
       color: #1b3d16;
     }
-    h1 { font-size: 1.25rem; margin: 0 0 8px; }
-    .sub { font-size: 0.9rem; opacity: 0.85; margin: 0 0 20px; text-align: center; }
+    :root { --content-fs-bump: 2pt; }
+    h1 { font-size: calc(1.25rem + var(--content-fs-bump)); margin: 0 0 8px; }
+    .sub { font-size: calc(0.9rem + var(--content-fs-bump)); opacity: 0.85; margin: 0 0 20px; text-align: center; }
     #qr-box {
       padding: 20px;
       background: #fff;
@@ -29,7 +30,7 @@
     }
     #url-text {
       margin-top: 20px;
-      font-size: 0.8rem;
+      font-size: calc(0.8rem + var(--content-fs-bump));
       word-break: break-all;
       max-width: 320px;
       text-align: center;
